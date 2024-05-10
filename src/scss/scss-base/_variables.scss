@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Media
+$minwidth: 320px;
+$mw: 1200px;
+$md1: $mw + 12px;
+$md2: 992.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+
+:root {
+	--font-main: 'Roboto', sans-serif;
+}
