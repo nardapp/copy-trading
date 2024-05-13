@@ -31,12 +31,14 @@ const StrategyTable: React.FC<IStrategyTable> = ({
 			title: 'Strategy name',
 			dataIndex: 'name',
 			key: 'name',
-			render: (text: string) => (
+			render: (text: string, record: IResults) => (
 				<div className={styles.table__name}>
 					<Avatar size="large" src="/default-avatar.jpg" className={styles.strategies__avatar} />
 					<div>
 						<h3>{text}</h3>
-						<Link to="/">More details...</Link>
+						<Link to={`https://cryptocake.ai/strategies/${record.id}`} target="_blank">
+							More details...
+						</Link>
 					</div>
 				</div>
 			)
@@ -113,9 +115,11 @@ const StrategyTable: React.FC<IStrategyTable> = ({
 				dataSource={results}
 				pagination={false}
 				className={styles.table}
-				onRow={() => {
+				onRow={(record: IResults) => {
 					return {
-						onClick: () => {}
+						onClick: () => {
+							window.open(`https://cryptocake.ai/strategies/${record.id}`, '_blank', 'noreferrer')
+						}
 					}
 				}}
 			/>

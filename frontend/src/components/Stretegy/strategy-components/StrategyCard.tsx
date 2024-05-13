@@ -30,7 +30,7 @@ const StrategyCard: React.FC<IResults> = ({ id, name, stats, number }) => {
 	return (
 		<div className={styles.card__column}>
 			<Badge.Ribbon text={`# ${number}`} color="#fbc531" className={styles.card__badge}>
-				<Link to="/" className={styles.card__item}>
+				<Link to={`https://cryptocake.ai/strategies/${id}`} target="_blank" className={styles.card__item}>
 					<div className={styles.card__wrapper}>
 						<Avatar size={60} src="/default-avatar.jpg" className={styles.strategies__avatar} />
 						<h3>{name}</h3>
