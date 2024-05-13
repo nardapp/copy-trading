@@ -1,0 +1,22 @@
+@import './variables';
+
+.btn {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 14px;
+	border-radius: 10px;
+
+	text-align: center;
+	background: var(--yellow);
+	color: var(--purple);
+	border-bottom: 3px solid #a67e11;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		background: #ffd666 !important;
+		border-bottom: 3px solid #ffd666 !important;
+		color: var(--purple) !important;
+	}
+}

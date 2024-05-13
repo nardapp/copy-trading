@@ -1,0 +1,163 @@
+@import '../../styles/scss-base/variables';
+
+.strategies {
+	padding: 100px 0;
+
+	&__body {
+		h2 {
+			font-size: 24px;
+			font-weight: 700;
+			color: var(--text-black);
+			text-align: center;
+			margin: 0 0 10px 0;
+		}
+
+		p {
+			text-align: center;
+			font-size: 16px;
+			color: var(--text-black);
+		}
+	}
+
+	&__icon {
+		font-size: 20px;
+		padding: 0 10px;
+	}
+
+	&__pagination {
+		display: flex;
+		justify-content: center;
+		margin: 20px 0 0 0;
+	}
+
+	&__avatar {
+		img {
+			filter: blur(3px);
+			border-radius: 50%;
+		}
+	}
+}
+
+.card {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 15px;
+
+	&__badge {
+		font-weight: 600;
+	}
+
+	&__column {
+		flex: 0 1 32.4%;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		padding: 100px 20px 50px 20px;
+		box-shadow: 0px 5px 10px 2px rgba(168, 194, 214, 0.2);
+		background-color: #fff;
+		border-radius: 20px;
+		transition: all 0.3s ease 0s;
+		position: relative;
+		overflow: hidden;
+
+		&:hover {
+			transform: translateY(-10px);
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		background: linear-gradient(225deg, rgba(196, 154, 255, 1) 30%, rgba(251, 197, 49, 1) 100%);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		padding: 20px 15px;
+		gap: 10px;
+
+		h3 {
+			font-size: 20px;
+			font-weight: 500;
+			color: var(--text-black);
+		}
+	}
+
+	&__roi {
+		margin: 10px auto 20px 0;
+
+		p:first-child {
+			text-align: left;
+			font-size: 14px;
+			color: #828799;
+		}
+		p:last-child {
+			font-size: 34px;
+			font-weight: 600;
+			color: var(--green);
+		}
+	}
+
+	&__statistics {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 15px;
+		margin: 0 0 10px 0;
+
+		span:first-child {
+			font-size: 14px;
+			color: #828799;
+		}
+		span:last-child {
+			text-align: right;
+			font-size: 14px;
+			font-weight: 500;
+			color: var(--text-black);
+		}
+	}
+
+	@media (max-width: $md1) {
+		&__column {
+			flex: 0 1 32.3%;
+		}
+	}
+
+	@media (max-width: $md2) {
+		&__column {
+			flex: 0 1 48.8%;
+		}
+	}
+
+	@media (max-width: $md3) {
+		&__column {
+			flex: 0 1 100%;
+		}
+	}
+}
+
+.table {
+	font-weight: 500;
+	color: var(--text-black);
+
+	&__name {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+
+		h3 {
+			font-size: 14px;
+		}
+
+		a {
+			color: var(--yellow);
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

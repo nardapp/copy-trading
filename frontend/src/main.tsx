@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Provider } from './provider'
 import App from './App'
 
-import './scss/style.scss'
+import { Provider } from './provider'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-	<Provider>
-		<App />
-	</Provider>
+	<BrowserRouter>
+		<Provider>
+			<App />
+		</Provider>
+	</BrowserRouter>
 )
