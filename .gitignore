@@ -1,2 +1,4 @@
 diagrams/
-remixd/
+**/artifacts
+**/.deps
+**/.states
