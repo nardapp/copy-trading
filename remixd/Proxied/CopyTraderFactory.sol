@@ -17,11 +17,13 @@ import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol
 
 contract MyCopyTrader is Initializable {
     
-    address public owner;    
+    address public owner;
 
     function initialize(address _owner) public {
         owner = _owner;
     }
+
+    constructor() initializer {}
 
     function returnAddress() public view returns(address) {
         return address(this);
